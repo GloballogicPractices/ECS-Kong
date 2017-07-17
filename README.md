@@ -1,3 +1,4 @@
+##### WORK IN PROGRESS
 ### Kong - API-Gateway on Weaveworks-ECS AMI
 ---  
 
@@ -27,11 +28,18 @@
 - Ansible >= 2.3 
 - Python 2.7 
 - Boto, Botocore
-- Registtered Domain and Route53 Hosted zone ( Good to have else you have to change code )
+- Registerred Domain and Route53 Hosted zone ( Good to have else you have to change code )
 - Related ACM certificates for your domain ( Good to have else you have to change code )
 
 <br />
 
+```shell
+# Prepare your environment ( Terraform and Ansible ) 
+# Change directory to terraform code/environments
+# We are considering a sample development environment 
+# setup a secrets.tf file
+terraform plan -var-file=secrets.tf
+```
 
 
 ##### Note 
