@@ -65,18 +65,32 @@
 
 
 #### Deployment procedure
----
 1. Ensure pre-requisites are met 
 2. Decide a region where this needs to be deployed 
 3. This guides a cluster in a region with 3 AZs. You can reduce the number in terraform.tfvars file 
-2. Generate your ACM Certificates for the domain 
+4. Generate your ACM Certificates for the domain 
+5. Ensure a private key is available in AWS
+
 
 ```shell
 # Prepare your environment ( Terraform and Ansible )
-# Change directory to terraform code/environments
+# Change directory to terraform/environments/development 
 # We are considering a sample development environment
-# setup a secrets.tf file
-terraform plan -var-file=secrets.tf
+# Update secrets.tf file with your public key 
+
+$ cat secrets.tf
+aws_key_name = "test-cluster-key"
+aws_key_path = "~/.ssh/test-cluster-key.pem"
+// Can be generated using
+// ssh-keygen -y -f mykey.pem > mykey.pub
+keypair_public_key = "ssh-rsa publickey" # Replace this with public key corresponding to your private key in AWS
+
+# You can use any authentication procedures mentioned here https://www.terraform.io/docs/providers/aws/
+
+$ export AWS_ACCESS_KEY_ID="anaccesskey"
+$ export AWS_SECRET_ACCESS_KEY="asecretkey"
+$ export AWS_DEFAULT_REGION="us-west-2"
+
 ```
 
 
