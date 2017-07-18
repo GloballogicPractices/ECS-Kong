@@ -22,6 +22,8 @@
 - Demonstrate use of overlay network for ECS
 
 
+![alt text](https://raw.githubusercontent.com/faizan82/ECS-kong/master/images/weave-on-ecs.png)
+
 ##### Pre-requisites
 - AWS account. Obviously!
 - Terraform > 0.9.5
