@@ -1,4 +1,3 @@
-##### WORK IN PROGRESS
 ### Kong - API-Gateway on Weaveworks-ECS AMI
 ---  
 
@@ -198,7 +197,19 @@ main_ssl_certificate_id      = "ARNOFYOURCERT"
 ```
 
 
+##### Plan and setup 
+```shell
+terraform plan -var-file="secrets.tf"
+# If successful then 
+terraform apply -varf-file="secrets.tf"
+## There should be no manual intervention required.
+```
+
+
 ##### Note
-- This is beyond the scope of Free-tier since we use two ELBs and t2.medium instances. You can reduce t2.medium to micro and replace ELBs with your own loadbalancers but you will have to update the code
-- Kong limitation: A single node needs to be deployed first and then can be scaled due to limitation with https://github.com/Mashape/kong/issues/2139
-- Cassandra : There is no concept of master - slave. However, for clustering it expects a pre-existing Seed Node. In order to achieve this, a Seed Node is deployed and then clients are added. Based on the choosen replication factor, there can be data replicated across all nodes
+- Cost: This is beyond the scope of Free-tier since we use two ELBs and t2.medium instances. You can reduce t2.medium to micro and replace ELBs with your own loadbalancers but you will have to update the code
+- Kong-limitation: A single node needs to be deployed first and then can be scaled due to limitation with https://github.com/Mashape/kong/issues/2139
+- Cassandra: There is no concept of master - slave. However, for clustering it expects a pre-existing Seed Node. In order to achieve this, a Seed Node is deployed and then clients are added. Based on the choosen replication factor, there can be data replicated across all nodes
+- Environment: The environment keyword is used to pickup a defined ansible role. If you change or add new environments, ensure that corresponding Yaml file exists in Ansible role
+
+For information on Ecs utility : https://github.com/faizan82/ecs-orchestrate
