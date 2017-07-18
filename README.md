@@ -12,6 +12,13 @@
 
 <br />
 
+###### Weave with ECS
+
+![alt text](https://raw.githubusercontent.com/faizan82/ECS-kong/master/images/weave-on-ecs.png)
+
+<br />
+
+
 ##### This repository
 - Terraform modules and code to deploy a highly available Kong cluster in ECS
 - Ansible Integration to demonstrate concepts for deploying Kong and Cassandra services
@@ -22,7 +29,7 @@
 - Demonstrate use of overlay network for ECS
 
 
-![alt text](https://raw.githubusercontent.com/faizan82/ECS-kong/master/images/weave-on-ecs.png)
+
 
 ##### Pre-requisites
 - AWS account. Obviously!
