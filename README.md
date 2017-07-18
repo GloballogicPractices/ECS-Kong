@@ -28,9 +28,12 @@
 - Demostrate use of WeaveWorks networking in deploying the cluster and service discovery in ECS
 - Demonstrate use of overlay network for ECS
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 856e92fb197c06bd3bc495c0062a6aeba88e2c6a
 ##### Pre-requisites
 - AWS account. Obviously!
 - Terraform > 0.9.5
