@@ -12,7 +12,7 @@
 
 <br />
 
-##### Weave with ECS
+#### Weave with ECS
 ---
 
 ![alt text](https://raw.githubusercontent.com/faizan82/ECS-kong/master/images/weave-on-ecs.png)
@@ -29,6 +29,9 @@
 - Also demonstrate deploy and destroy time provisioners in Terraform
 - Demostrate use of WeaveWorks networking in deploying the cluster and service discovery in ECS
 - Demonstrate use of overlay network for ECS
+- Demonstrate use of Cloudwatch-logs. A log group and stream is setup for log forwarding and aws logging driver is used.
+- Demonstrate cloud-init with Terraform 
+
 
 
 
@@ -50,6 +53,23 @@
 
 <br />
 
+### Deployment 
+---
+#### What is deployed?
+1. VPC - Three private subnets and three public subnets
+2. Two ECS Clusters ( Kong and Cassandra in public and private subnets respectively) 
+3. A bastion node.
+4. AWS Log group and log stream 
+5. EBS Volumes of 50G attached to each Cassandra node using cloud-init 
+6. Route53 entries based on choosen domain names and details provided to Terraform 
+
+
+#### Deployment procedure
+---
+1. Ensure pre-requisites are met 
+2. Decide a region where this needs to be deployed 
+3. This guides a cluster in a region with 3 AZs. You can reduce the number in terraform.tfvars file 
+2. Generate your ACM Certificates for the domain 
 
 ```shell
 # Prepare your environment ( Terraform and Ansible )
