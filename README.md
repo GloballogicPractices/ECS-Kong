@@ -12,11 +12,13 @@
 
 <br />
 
-###### Weave with ECS
+##### Weave with ECS
+---
 
 ![alt text](https://raw.githubusercontent.com/faizan82/ECS-kong/master/images/weave-on-ecs.png)
 
 <br />
+
 
 
 ##### This repository
@@ -40,6 +42,14 @@
 - Related ACM certificates for your domain ( Good to have else you have to change code )
 
 <br />
+
+#### Deployment architecture 
+---
+![alt text](https://raw.githubusercontent.com/faizan82/ECS-kong/master/images/kong-architecture.png)
+
+
+<br />
+
 
 ```shell
 # Prepare your environment ( Terraform and Ansible )
