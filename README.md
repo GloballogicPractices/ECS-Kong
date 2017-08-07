@@ -14,7 +14,7 @@
 #### Weave with ECS
 ---
 
-![alt text](https://raw.githubusercontent.com/faizan82/ECS-kong/master/images/weave-on-ecs.png)
+![alt text](images/weave-on-ecs.png)
 
 <br />
 
@@ -47,7 +47,7 @@
 
 #### Deployment architecture 
 ---
-![alt text](https://raw.githubusercontent.com/faizan82/ECS-kong/master/images/kong-architecture.png)
+![alt text](/images/kong-architecture.png)
 
 
 <br />
